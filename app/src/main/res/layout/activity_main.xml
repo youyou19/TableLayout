@@ -1,88 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/addAndroidVersionText"
-        android:layout_width="296dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-medium"
-        android:hint="Enter Android Version"
-        android:inputType="textPersonName"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="0,1"
+        android:id="@+id/tab"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/addAndroidCodeText"
-        android:layout_width="314dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Enter Android code Name"
-        android:inputType="textPersonName"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addAndroidVersionText" />
 
-    <Button
-        android:id="@+id/addBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="404dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="44dp"
-        android:background="@color/colorPrimary"
-        android:fontFamily="sans-serif-medium"
-        android:text="ADD"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addAndroidCodeText" />
+        <TableRow android:layout_height="150dp">
 
-    <TableLayout
-        android:id="@+id/layoutId"
-        android:layout_width="400dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="60dp"
-        android:background="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addBtn">
+
+            <EditText
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:ems="10"
+                android:hint="Enter Android Version"
+
+                android:textSize="20sp"/>
+
+
+        </TableRow>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <TableRow>
+            <EditText
+                android:id="@+id/codeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:ems="10"
+                android:hint="Enter Android Code Name"
+                android:textSize="20sp"
+
+                />
+        </TableRow>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <TableRow>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="Add" />
+
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+
+
 
         <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Version"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="@android:color/background_light"
-            android:background="@color/colorPrimary"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Code Name"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@android:color/background_light"
-            android:background="@color/colorPrimary"/>
+
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:layout_span="1"
+                android:text="Version"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_margin="5dp"
+                android:layout_span="1"
+                android:text="Android"
+                android:textSize="20sp"
+
+                />
+
+
+
+
+
+
         </TableRow>
+
+
+
     </TableLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
